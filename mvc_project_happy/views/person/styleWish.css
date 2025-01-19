@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8dcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.head {
+    position: absolute; /* Allows precise placement */
+    top: 10%; /* Adjusts its vertical position */
+    left: 50%; /* Centers it horizontally */
+    transform: translate(-50%, -50%); /* Ensures proper centering */
+    z-index: 3; /* Places it above #normal, #tablets, #phone */
+    font-size: 24px; /* Customize font size */
+    font-weight: bold; /* Make it stand out */
+    color: black; /* Customize text color */
+    width: 500px;
+    padding: 10px 20px; /* Optional: Add padding for spacing */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    text-align: center; /* Center the text */
+    background-color: lightblue;
+}
+
+@media (max-width: 500px) {
+    .head {
+        width: 350px;
+        font-size: 20px;
+    }
+    body {
+        background: linear-gradient(45deg, lightblue , #f8dcdc );
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        position: relative; /* Context for absolute positioning */
+    }
+
+    #phone {
+        position: absolute;
+        top: 20%; /* Position relative to viewport height */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -60%); /* Center and adjust */
+        width: 150px;
+        height: 20px;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        text-align: center;
+        z-index: 2;
+    }
+
+    #phone-sentence {
+        position: absolute;
+        top: 20%; /* Position relative to viewport height */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, 20%); /* Place below #phone */
+        width: 300px;
+        height: 200px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #normal, #tablets, #normal-sentence, #tablets-sentence {
+        display: none;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    body {
+        background-color: lightgray;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        position: relative; /* Context for absolute positioning */
+    }
+
+    #tablets {
+        position: absolute;
+        top: 20%; /* Position relative to viewport height */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -60%); /* Center and adjust */
+        width: 150px;
+        height: 20px;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        text-align: center;
+        z-index: 2;
+    }
+
+    #tablets-sentence {
+        position: absolute;
+        top: 20%; /* Position relative to viewport height */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, 20%); /* Place below #tablets */
+        width: 450px;
+        height: 200px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #normal, #phone, #normal-sentence, #phone-sentence {
+        display: none;
+    }
+}
+
+
+@media (min-width:769px) and (max-width:12000px){
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(45deg, lightcoral , lightskyblue );
+        
+        height: 100vh; /* Ensure the body takes up the full viewport height */
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Set the context for absolute positioning */
+    }
+    
+    #normal {
+        position: absolute; /* Enable absolute positioning */
+        top: 20%; /* Position from the center vertically */
+        left: 50%; /* Position from the center horizontally */
+        transform: translate(-50%, -60%); /* Adjust to center the element */
+        width: 150px;
+        height: 20px;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        text-align: center;
+        z-index: 2; /* Higher z-index ensures it appears above #normal-sentence */
+    }
+    
+    #normal-sentence {
+        position: absolute; /* Enable absolute positioning */
+        top: 20%; /* Position from the center vertically */
+        left: 50%; /* Position from the center horizontally */
+        transform: translate(-50%, 20%); /* Adjust to place it below #normal */
+        background-color: white;
+        width: 600px;
+        height: 300px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1; /* Lower z-index keeps it below #normal */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    #tablets, #phone, #tablets-sentence, #phone-sentence{
+        display: none;
+    }
+}

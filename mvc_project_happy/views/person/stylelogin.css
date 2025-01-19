@@ -1,0 +1,83 @@
+/* General body styling */
+body {
+    background: linear-gradient(to bottom, #a18cd1, #fbc2eb); /* Soft purple-pink gradient */
+    font-family: 'Itim', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Heading styling */
+h1.headForm {
+    font-family: 'Itim', cursive;
+    font-size: 2.5rem;
+    color: #fff; /* White text */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+    width: 300px;
+    margin-bottom: 150px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #6a11cb; /* Purple border on focus */
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #43e97b, #38f9d7); /* Green-blue gradient */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #38f9d7, #43e97b); /* Reverse gradient */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Link styling */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #6a11cb; /* Purple color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #38f9d7; /* Blue on hover */
+}
